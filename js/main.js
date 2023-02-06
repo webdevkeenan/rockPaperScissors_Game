@@ -14,6 +14,8 @@ getComputerChoice = () => {
     } else if (randomNumber === 3){
         return 'scissors'
     } */
+    
+    //Same code written in switch statement for practice.
     switch(randomNumber){
         case 1: 
         return 'rock';
