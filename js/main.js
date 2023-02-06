@@ -1,3 +1,7 @@
+// Welcome Message
+
+console.log('----Let\'s play Rock, Paper, Scissors!!!---')
+
 // Begin with function getComputerChoice that randomly returns Rock, Paper, or Scissors.
 
 getComputerChoice = () => {
@@ -24,33 +28,57 @@ getComputerChoice = () => {
 } 
 
 //Check getComputerChoice function.
-console.log(getComputerChoice())
+//console.log(getComputerChoice())
+
 //Write a function that plays a single round of RPS. Function should take two parameters. (playerSelection,computerSelection) and then RETURN a string that declares the winner of the round. Ex: "You Lose! Paper Beats Rock" (Make case sensitive so users can input rock/Rock or any other variation)
 
+//Player Score
+let playerScore = 0
+let computerScore = 0
 
-playRound = (playerSelection , computerSelection) => {
-    if(playerSelection === 'rock' && computerSelection === 'rock'){
-        return 'It\'s a tie!';
+const playRound = (playerSelection , computerSelection) => {
+    if(playerSelection === computerSelection){
+        return `It\'s a tie! Both picked ${playerSelection}!`
     } else if (playerSelection === 'rock' && computerSelection === 'paper'){
-        return 'You Lose! Paper Beats Rock!!!'
+        computerScore++ 
+        return 'You Lose! Paper Beats rock!!!'
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        return 'You Win!!! Rock beats scissors!!!'
-    } else if (playerSelection === 'paper' && computerSelection === 'paper') {
-        return 'It\s a tie!';
-    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        return 'You Win!!!! Paper beats rock!!!'
+        playerScore++
+        return 'You Win!!! Rock beats scissors!!!' 
+    }  else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        playerScore++
+        return 'You Win!!!! Paper beats rock!!!' 
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        return 'You Lose! Scissors beats paper!!'
-    } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-        return 'It\s a tie!'
+        computerScore++
+        return 'You Lose! Scissors beats paper!!' 
     } else if (playerSelection === 'scissors' && computerSelection === 'paper'){
-        return 'You Win!!! Scissors beats paper!!!'
+        playerScore++
+        return 'You Win!!! Scissors beats paper!!!' 
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        computerScore++
         return 'You Lose! Rock beats scissors!'
     }
 }
 
 const playerSelection = 'rock'
-let computerSelection = getComputerChoice()
 
-console.log(playRound(playerSelection, computerSelection))
+const game = () => {
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt('Let\'s play :D' , 'Rock, Paper, Scissors').toLowerCase()
+        const computerSelection = getComputerChoice()
+        console.log(playRound(playerSelection, computerSelection))
+
+    }
+
+    if (playerScore > computerScore) {
+        return prompt('You Won! Congratulations!!! :D', 'GAME OVER (Refresh the page)')
+    } else if (playerScore < computerScore) {
+        return prompt('You Lose!!! Try again :(' , 'GAME OVER (Refresh the page)')
+    } else {
+        return prompt('Tie. Try again!!!' , 'GAME OVER (Refresh the page)')
+    }
+}
+
+console.log(game())
+
+//Finished. Return to project later to fix prompt messages so game can be played from prompt.
