@@ -5,7 +5,7 @@ console.log('----Results---')
 // Begin with function getComputerChoice that randomly returns Rock, Paper, or Scissors.
 
 getComputerChoice = () => {
-    const randomNumber = Math.floor(Math.random() * 3 + 1)
+    const randomNumber = Math.floor(Math.random() * 3) + 1
     // Written in If/Else Statement
     /*if(randomNumber === 1) {
         return 'rock'
