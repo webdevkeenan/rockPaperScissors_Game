@@ -61,7 +61,7 @@ const playRound = (playerSelection , computerSelection) => {
         computerScore++
         return 'You Lose! Rock beats scissors!'
     } else
-        return 'invalid'
+        return 'Invalid Answer'
 } 
 
 // Function with a loop that plays 5 rounds against the computer and returns result.
