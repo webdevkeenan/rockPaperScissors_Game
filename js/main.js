@@ -1,4 +1,4 @@
-// Welcome Message
+// Display results in console
 
 console.log('----Results---')
 
