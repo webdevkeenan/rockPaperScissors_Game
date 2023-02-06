@@ -1,11 +1,11 @@
-// Welcome Message
+// Display results in console
 
 console.log('----Results---')
 
 // Begin with function getComputerChoice that randomly returns Rock, Paper, or Scissors.
 
 getComputerChoice = () => {
-    const randomNumber = Math.floor(Math.random() * 3 + 1)
+    const randomNumber = Math.floor(Math.random() * 3) + 1
     // Written in If/Else Statement
     /*if(randomNumber === 1) {
         return 'rock'
@@ -36,7 +36,7 @@ getComputerChoice = () => {
 let playerScore = 0
 let computerScore = 0
 
-
+//Function that plays a single round against the computer.
 const playRound = (playerSelection , computerSelection) => {
     if(playerSelection === computerSelection){
         return `It\'s a tie! Both picked ${playerSelection}!`
