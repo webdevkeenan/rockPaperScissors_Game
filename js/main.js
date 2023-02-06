@@ -77,8 +77,10 @@ const game = () => {
         return prompt('You Won! Congratulations!!! :D', 'GAME OVER (Refresh the page)')
     } else if (playerScore < computerScore) {
         return prompt('You Lose!!! Try again :(' , 'GAME OVER (Refresh the page)')
-    } else {
+    } else if (playerScore === computerScore) {
         return prompt('Tie. Try again!!!' , 'GAME OVER (Refresh the page)')
+    } else {
+        return prompt('Yo! What are you doing?? LOL This is Rock, Paper, Scissors! Try again my friend.'
     }
 }
 
