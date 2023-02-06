@@ -79,6 +79,7 @@ const game = () => {
     }
 }
 
+//Display game results in browser console
 console.log(game())
 
 //Finished. Return to project later to  learn how to fix prompt messages so game can be played from prompt only.
