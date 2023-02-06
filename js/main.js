@@ -36,6 +36,7 @@ getComputerChoice = () => {
 let playerScore = 0
 let computerScore = 0
 
+
 const playRound = (playerSelection , computerSelection) => {
     if(playerSelection === computerSelection){
         return `It\'s a tie! Both picked ${playerSelection}!`
@@ -58,10 +59,9 @@ const playRound = (playerSelection , computerSelection) => {
         computerScore++
         return 'You Lose! Rock beats scissors!'
     }
-}
+} 
 
-const playerSelection = 'rock'
-
+// Function with a loop that plays 5 rounds against the computer and returns result.
 const game = () => {
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt('Let\'s play 5 rounds! :D (CTRL + Shift + I to see results)' , 'Type: Rock, Paper, or Scissors').toLowerCase()
@@ -81,4 +81,4 @@ const game = () => {
 
 console.log(game())
 
-//Finished. Return to project later to fix prompt messages so game can be played from prompt.
+//Finished. Return to project later to  learn how to fix prompt messages so game can be played from prompt only.
