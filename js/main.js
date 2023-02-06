@@ -1,6 +1,6 @@
 // Welcome Message
 
-console.log('----Let\'s play Rock, Paper, Scissors!!!---')
+console.log('----Results---')
 
 // Begin with function getComputerChoice that randomly returns Rock, Paper, or Scissors.
 
@@ -64,7 +64,7 @@ const playerSelection = 'rock'
 
 const game = () => {
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt('Let\'s play :D' , 'Rock, Paper, Scissors').toLowerCase()
+        const playerSelection = prompt('Let\'s play :D (CTRL + Shift + I to see results)' , 'Rock, Paper, Scissors').toLowerCase()
         const computerSelection = getComputerChoice()
         console.log(playRound(playerSelection, computerSelection))
 
