@@ -71,18 +71,17 @@ const game = () => {
         const playerSelection = prompt('Let\'s play 5 rounds! :D (CTRL + Shift + I to see results)' , 'Type: Rock, Paper, or Scissors').toLowerCase()
         const computerSelection = getComputerChoice()
         console.log(playRound(playerSelection, computerSelection))
-        }
+        
     }
 
     if (playerScore > computerScore) {
         return prompt('You Won! Congratulations!!! :D', 'GAME OVER (Refresh the page)')
     } else if (playerScore < computerScore) {
         return prompt('You Lose!!! Try again :(' , 'GAME OVER (Refresh the page)')
-    } else if (playerScore === computerScore) {
-        return prompt('Tie. Try again!!!' , 'GAME OVER (Refresh the page)')
     } else {
-        return prompt('Yo! What are you doing?? LOL This is Rock, Paper, Scissors! Try again my friend.')
-    }
+        return prompt('Tie. Try again!!!' , 'GAME OVER (Refresh the page)')
+    } 
+}  
 
 
 //Display game results in browser console
