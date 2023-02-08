@@ -1,6 +1,6 @@
 // Display results in console
 
-console.log('----Results---')
+console.log('----Results---');
 
 // Begin with function getComputerChoice that randomly returns Rock, Paper, or Scissors.
 
@@ -18,7 +18,7 @@ getComputerChoice = () => {
     //Same code written in switch statement for practice.
     switch(randomNumber){
         case 1: 
-        return 'rock';
+        return 'rock'
         break;
         case 2: 
         return 'paper'
@@ -35,8 +35,8 @@ getComputerChoice = () => {
 //Write a function that plays a single round of RPS. Function should take two parameters. (playerSelection,computerSelection) and then RETURN a string that declares the winner of the round. Ex: "You Lose! Paper Beats Rock" (Make case sensitive so users can input rock/Rock or any other variation)
 
 //Player Score
-let playerScore = 0
-let computerScore = 0
+let playerScore = 0;
+let computerScore = 0;
 
 //Function that plays a single round against the computer.
 const playRound = (playerSelection , computerSelection) => {
@@ -85,6 +85,6 @@ const game = () => {
 
 
 //Display game results in browser console
-console.log(game())
+console.log(game());
 
 //Finished. Return to project later to  learn how to fix prompt messages so game can be played from prompt only.
