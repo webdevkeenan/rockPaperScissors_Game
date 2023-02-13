@@ -75,11 +75,11 @@ const game = () => {
     }
 
     if (playerScore > computerScore) {
-        return prompt('You Won! Congratulations!!! :D', 'GAME OVER (Refresh the page)')
+        return alert('You Won! Congratulations!!! :D \n GAME OVER (Refresh the page)')
     } else if (playerScore < computerScore) {
-        return prompt('You Lose!!! Try again :(' , 'GAME OVER (Refresh the page)')
+        return alert('You Lose!!! Try again :( \n GAME OVER (Refresh the page)')
     } else {
-        return prompt('Tie. Try again!!!' , 'GAME OVER (Refresh the page)')
+        return alert('Tie. Try again!!! \n GAME OVER (Refresh the page)')
     } 
 }  
 
